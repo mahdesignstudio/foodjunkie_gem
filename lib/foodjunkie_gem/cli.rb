@@ -8,6 +8,8 @@ class FoodjunkieGem::CLI
     menu
   end 
   
+  # FoodJunkie.all => 24 cuisine types 
+  
   def menu
       input = gets.strip.downcase
       
@@ -22,9 +24,9 @@ class FoodjunkieGem::CLI
   end
   
     def cuisine_list # method for when user enters 'hungry' 
-        puts "1. Cuisine 1" #Attributes will go here 
-        puts "2. Cuisine 2"
-        puts "3. Cuisine 3"
+        FoodJunkie.all.each_with_index do |cuisine_type, index|
+            puts "#(index + 1). #{cuisine_type.name}"
+        end 
         puts ""
         puts ""
         puts "Which Cuisine type would you like to try today? "

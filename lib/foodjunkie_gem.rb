@@ -1,11 +1,13 @@
-require 'pry'
+#require 'pry'
+require 'rest-client'
+require 'json'
  
- require_relative "./foodjunkie_gem/version"
  
- require_relative './foodjunkie_gem/api.rb'
- require_relative './foodjunkie_gem/cli.rb'
- require_relative './foodjunkie_gem/foodjunkie.rb'
+require_relative "./foodjunkie_gem/version"
  
- require 'rest-client'
- require 'json'
+require_relative './foodjunkie_gem/api.rb'
+require_relative './foodjunkie_gem/cli.rb'
+require_relative './foodjunkie_gem/foodjunkie.rb'
+ 
+
 

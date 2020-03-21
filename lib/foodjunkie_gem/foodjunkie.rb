@@ -1,5 +1,5 @@
 class Foodjunkie 
-    attr_accessor :name :area :category :ingredient :description 
+    attr_accessor :name  
     
     @@all = []
     
@@ -22,5 +22,5 @@ class Foodjunkie
       self.all.select do |cuisine_type|
         cuisine_type.name == name
       end 
-    end     
+   end      
 end 
