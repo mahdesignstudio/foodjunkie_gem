@@ -1,8 +1,8 @@
 API: https://www.themealdb.com/api.php?ref=apilist.fun
 
 1. Build CLI
-2. Welcome User, prompt user to select an Area or exit application 
-3. User selects Area, print list of "Meals" in that area. User is also able to select a new Area. 
+2. Welcome User, prompt user to enter 'let's make a meal' or exit application by entering 'goodbye'. Exit prompt, 'don't leave hungry!'
+3. User enter 'let's make a meal', prints a list of areas for user to select. User is to select an "area" by entering "location". User is also able to select a new Area. 
 4. List of "Meals": user is able to select a meal from list by "Meal Name" 
 5. "Meal Name" will display the meals information. 
               a. "strMeal" #hashes (converting these into attributes) 
