@@ -1,5 +1,5 @@
-#!/usr/local/bin/ruby 
+#!/usr/bin/env ruby
 
-require_relative "../config/environment" 
+require_relative '../lib/foodjunkie_gem'
 
-CLI.new.connection_test 
+
