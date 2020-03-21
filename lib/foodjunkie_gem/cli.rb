@@ -6,11 +6,11 @@ class FoodjunkieGem::CLI
     puts "To exit, enter 'goodbye'" #when user exits, prompt 'don't leave hungry!'
   end 
   
-  # def area
-  #     input = gets.strip.downcase
+  def area
+      input = gets.strip.downcase
       
-  #     if input == "list"
-  #       puts "list"
-  #   else 
-  # end
+      if input == "list"
+        puts "list"
+    else 
+  end
 end 
