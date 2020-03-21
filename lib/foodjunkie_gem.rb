@@ -1,3 +1,6 @@
+require 'httparty'
+require 'pry'
+ 
  require_relative "./foodjunkie_gem/version"
  
  require_relative './foodjunkie_gem/api.rb'
