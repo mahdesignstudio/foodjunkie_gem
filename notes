@@ -10,3 +10,9 @@ API: https://www.themealdb.com/api.php?ref=apilist.fun
               c. "strInstructions" #hashes (converting these into attributes)
               d. "strYoutube" #hashes (converting these into attributes) * Bonus
 6. If they select exit, goodbye- "bon Appetit" exit program              
+
+3 Classes: 
+
+  CLI- controller- what communicates with my User
+  Foodjunkie- where objects are created and stored for user display
+  API- bring in external, consume api here, instantiate my objects.  
