@@ -24,8 +24,8 @@ class FoodjunkieGem::CLI
   end
   
     def cuisine_list # method for when user enters 'hungry' 
-        FoodJunkie.all.each_with_index do |cuisine_type, index|
-            puts "#(index + 1). #{cuisine_type.name}"
+        FoodJunkie.all.each_with_index do |cuisine, index|
+            puts "#(index + 1). #{cuisine.name}"
         end 
         puts ""
         puts ""
@@ -35,9 +35,9 @@ class FoodjunkieGem::CLI
         cuisine_selection(input) 
     end 
     
-    def cuisine_selection(cuisine_type)
-        puts "#{cuisine_type}"
-        # go over my cuisine_type array, find method to find the cuisine_type
+    def cuisine_selection(cuisine)
+        puts "#{cuisine}"
+        # go over my cuisine array, find method to find the cuisine type
       
         
         
