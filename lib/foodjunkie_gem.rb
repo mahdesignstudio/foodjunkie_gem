@@ -1,9 +1,8 @@
  require_relative "./foodjunkie_gem/version"
  
- module FoodjunkieCli 
-   class Error < StandardError; end 
-     # Your code goes here...
-  end 
+ require_relative './foodjunkie_gem/api.rb'
+ require_relative './foodjunkie_gem/cli.rb'
+ require_relative './foodjunkie_gem/foodjunkie.rb'
  
  
- puts "environment file"
+

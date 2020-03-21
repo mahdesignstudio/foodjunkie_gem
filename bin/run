@@ -2,4 +2,4 @@
 
 require_relative '../lib/foodjunkie_gem'
 
-
+FoodjunkieGem::CLI.new.call 
