@@ -4,6 +4,7 @@ class FoodjunkieGem::CLI
     puts "Welcome User"
     puts "To see FoodJunkie, enter 'hungry'"
     puts "To exit, enter 'goodbye'" #when user exits, prompt 'don't leave hungry!'
+    API.get_data
     menu
   end 
   
@@ -28,7 +29,7 @@ class FoodjunkieGem::CLI
         puts ""
         puts "Which Cuisine type would you like to try today? "
          input = gets.strip.downcase
-         
+        
         cuisine_selection(input) 
     end 
     

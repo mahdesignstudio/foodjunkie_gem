@@ -1,4 +1,3 @@
-require 'httparty'
 require 'pry'
  
  require_relative "./foodjunkie_gem/version"
@@ -7,5 +6,6 @@ require 'pry'
  require_relative './foodjunkie_gem/cli.rb'
  require_relative './foodjunkie_gem/foodjunkie.rb'
  
- 
+ require 'rest-client'
+ require 'json'
 
