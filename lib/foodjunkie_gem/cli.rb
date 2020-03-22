@@ -4,7 +4,7 @@ class FoodjunkieGem::CLI
     puts "Welcome User"
     puts "To see FoodJunkie, enter 'hungry'"
     puts "To exit, enter 'goodbye'" #when user exits, prompt 'don't leave hungry!'
-    API.fetch
+    #API.fetch
     menu
   end 
   
