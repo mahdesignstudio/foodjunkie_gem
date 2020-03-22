@@ -1,5 +1,5 @@
 class FoodjunkieGem::CLI 
-  #need instances/objs of the class 2 call the method 
+
   def call 
     puts "Welcome User"
     puts "To see FoodJunkie, enter 'hungry'"
@@ -24,7 +24,7 @@ class FoodjunkieGem::CLI
   end
   
     def cuisine_list # method for when user enters 'hungry' 
-        FoodJunkie.all.each_with_index do |cuisine, index|
+        Foodjunkie.all.each_with_index do |cuisine, index|
             puts "#(index + 1). #{cuisine.name}"
         end 
         puts ""
