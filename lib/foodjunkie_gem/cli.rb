@@ -58,7 +58,17 @@ class FoodjunkieGem::CLI
         API.all_cuisines.each.with_index(1) do |cuisine, idx|
           #binding.pry
         puts "#{idx}.#{cuisine}"
-        end   
+       end   
+       API.get_cuisine_meals
+       #binding.pry
+       self.cuisine_meals
+     
+    end 
+
+    def cuisine_meals
+        puts ""
+        input = gets.chomp.downcase
+        
     end 
     
     def goodbye 
