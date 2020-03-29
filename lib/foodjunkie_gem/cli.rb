@@ -1,9 +1,10 @@
 class FoodjunkieGem::CLI 
 
   def call 
-    puts "Welcome User"
+    puts "Welcome to FoodJunkie!"
     sleep(2)
-    puts "To see FoodJunkie, enter 'hungry'"
+    puts ""
+    puts "To see meals based on Cuisine Types, enter 'hungry'"
     sleep(2)
     puts "To exit, enter 'goodbye'" #when user exits, prompt 'don't leave hungry!'
     sleep(2)
