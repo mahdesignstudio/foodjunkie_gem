@@ -44,12 +44,6 @@ class FoodjunkieGem::CLI
         puts "******|******|******|******|******|******|******|"
         sleep(2)
         puts ""
-        puts "[Please select a number from the list below to find meals in this Cuisine type.]"
-        sleep(1)
-        puts ""
-        #  input = gets.strip.downcase
-        
-        # cuisine_selection(input) 
         API.get_cuisines
         self.display_cuisines
     end 
@@ -58,18 +52,30 @@ class FoodjunkieGem::CLI
         API.all_cuisines.each.with_index(1) do |cuisine, idx|
           #binding.pry
         puts "#{idx}.#{cuisine}"
-       end   
-       API.get_cuisine_meals
-       #binding.pry
-       self.cuisine_meals
-     
+       end 
+       self.cuisine_meals  
     end 
 
     def cuisine_meals
-        puts ""
-        input = gets.chomp.downcase
-        
-    end 
+      puts ""
+      sleep(2)
+      puts "******|******|******|******|******|******|******|******|******|******|******|******|******|******|******|******|******|"
+      puts "To see a list of the meals from a specific cuisine above, type in the number of that cuisine or type 'goodbye' to end program."
+      puts "******|******|******|******|******|******|******|******|******|******|******|******|******|******|******|******|******|"
+      sleep(2)
+      puts ""
+        input = gets.chomp.downcase 
+        if input == 'goodbye'
+          goodbye
+        elsif (1..API.all.size).include?(input.to_i)
+            cuisine = API.all[input.to_i -1]
+            API.get_cuisine_meals(meals)
+        else 
+          puts "Invalid entry, please try again"
+          self.display_cuisines
+        end 
+          #binding.pry
+      end 
     
     def goodbye 
        puts "Don't leave hungry!"
