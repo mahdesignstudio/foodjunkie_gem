@@ -16,9 +16,14 @@ class API
         @@all_cuisines
     end 
 
-    def self.get_cuisine_meals
-        meals_response = HTTParty.get('https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian')
+    def self.get_cuisine_meals(meals)
+        meals_response = HTTParty.get('https://www.themealdb.com/api/json/v1/1/filter.php?a=#{cuisine_area.strArea}')
+        meals_response['meals'].each {|meal_list| Foodjunkie.new(meal_list)}
         
-        binding.pry
     end
+
+    def self.all_meals 
+        @@all_meals 
+    end 
+    #binding.pry
 end     
