@@ -44,12 +44,12 @@ class FoodjunkieGem::CLI
         puts "******|******|******|******|******|******|******|"
         sleep(2)
         puts ""
-        API.get_cuisines
+        FoodjunkieGem::API.get_cuisines
         self.display_cuisines
     end 
     
     def display_cuisines
-        API.all_cuisines.each.with_index(1) do |cuisine, idx|
+      FoodjunkieGem::API.all_cuisines.each.with_index(1) do |cuisine, idx|
           #binding.pry
         puts "#{idx}.#{cuisine}"
        end 
@@ -67,9 +67,9 @@ class FoodjunkieGem::CLI
         input = gets.chomp.downcase 
         if input == 'goodbye'
           goodbye
-        elsif (1..API.all.size).include?(input.to_i)
-            cuisine = API.all[input.to_i -1]
-            API.get_cuisine_meals(meals)
+        elsif (1..FoodjunkieGem::API .all.size).include?(input.to_i)
+            cuisine = FoodjunkieGem::API .all[input.to_i -1]
+            FoodjunkieGem::API .get_cuisine_meals(meals)
         else 
           puts "Invalid entry, please try again"
           self.display_cuisines

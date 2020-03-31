@@ -1,5 +1,5 @@
-class API 
-     attr_accessor :strArea    
+class FoodjunkieGem::API 
+     attr_accessor :strArea, :strMeal    
 
 
     def self.get_cuisines

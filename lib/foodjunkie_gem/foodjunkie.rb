@@ -21,6 +21,7 @@ class Foodjunkie
     def update(attr_hash)
       attr_hash.each do |k, v|
         self.send("#{k}=", v) if self.respond_to?("#{k}=")
+      end
     end 
     
     def self.find_by_name(name)
