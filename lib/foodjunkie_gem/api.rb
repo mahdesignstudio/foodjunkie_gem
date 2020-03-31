@@ -1,5 +1,5 @@
 class FoodjunkieGem::API 
-     attr_accessor :strArea, :strMeal    
+     attr_accessor :strArea, :idMeal     
 
 
     def self.get_cuisines
@@ -16,14 +16,18 @@ class FoodjunkieGem::API
         @@all_cuisines
     end 
 
-    def self.get_cuisine_meals(meals)
-        meals_response = HTTParty.get('https://www.themealdb.com/api/json/v1/1/filter.php?a=#{cuisine_area.strArea}')
-        meals_response['meals'].each {|meal_list| Foodjunkie.new(meal_list)}
-        
-    end
-
     def self.all_meals 
         @@all_meals 
     end 
+    
+    def self.get_cuisine_meals
+        
+        meals_response = HTTParty.get('https://www.themealdb.com/api/json/v1/1/filter.php?a=Canada')
+        binding.pry
+        @@all_meals = meals_response['meals'].map {|hash| hash['strMeal']}
+        
+    end
+
+   
     #binding.pry
 end     
