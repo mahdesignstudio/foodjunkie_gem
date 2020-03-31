@@ -4,8 +4,8 @@ class FoodjunkieGem::Cuisines
 
     @@all = []
 
-    def initialize(area)
-        area.each {|key,value|self.send(("#{key}="), value)}
+    def initialize(arg)
+        arg.each {|key,value|self.send(("#{key}="), value)}
         @@all << self 
     end
     
