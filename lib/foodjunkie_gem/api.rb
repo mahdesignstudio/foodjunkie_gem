@@ -20,7 +20,7 @@ class FoodjunkieGem::API
         @@all_meals 
     end 
     
-    def self.get_cuisine_meals
+    def self.get_cuisine_meals(meals_response)
         
         meals_response = HTTParty.get('https://www.themealdb.com/api/json/v1/1/filter.php?a=Canada')
         binding.pry
